@@ -1,0 +1,21 @@
+<div class="search-container">
+  <div class="search-input">
+    <input
+      type="text"
+      placeholder="Search movies..."
+      [(ngModel)]="searchQuery"
+      (keyup.enter)="performSearch()"
+    />
+    <button mat-icon-button color="primary" (click)="performSearch()">
+      <mat-icon>search</mat-icon>
+      <span>Search</span>
+    </button>
+  </div>
+  <div class="results">
+    <div class="result" *ngFor="let movie of searchResults$ | async">
+      <div class="year" (click)="showMoviePoster(movie)">{{ movie.Year }}</div>
+      <div class="title" (click)="routeToMoviePoster(movie)">{{ movie.Title }}</div>
+      <mat-icon *ngIf="isCurrentYear(movie.Year)" class="new-icon">fiber_new</mat-icon>
+    </div>
+  </div>
+</div>

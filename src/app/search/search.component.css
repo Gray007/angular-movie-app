@@ -1,0 +1,67 @@
+.search-container {
+  margin-bottom: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.results {
+  margin-top: 10px;
+}
+
+.result {
+  padding: 10px;
+  background-color: #222;
+  margin-bottom: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.result:hover {
+  background-color: #444;
+}
+
+.result .year {
+  width: 50px;
+  text-align: center;
+}
+
+.result .title {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.result .year:hover {
+  font-weight: bold;
+  color: green;
+}
+
+.result .new-icon {
+  font-size: 20px;
+  color: red;
+  margin-left: 10px;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-input input {
+  flex-grow: 1;
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.search-input button {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.search-input button span {
+  margin-left: 5px;
+}
