@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-movie-poster-page',
@@ -11,8 +11,8 @@ export class MoviePosterPageComponent implements OnInit {
   constructor(private route: ActivatedRoute) {}
 
   ngOnInit(): void {
-    this.route.params.subscribe((params) => {
-      this.posterUrl = decodeURIComponent(params['posterUrl']);
+    this.route.queryParams.subscribe((params: Params) => {
+      this.posterUrl = decodeURIComponent(params['posterUrl'] || '');
     });
   }
 }

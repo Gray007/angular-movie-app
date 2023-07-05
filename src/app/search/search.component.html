@@ -14,7 +14,7 @@
   <div class="results">
     <div class="result" *ngFor="let movie of searchResults$ | async">
       <div class="year" (click)="showMoviePoster(movie)">{{ movie.Year }}</div>
-      <div class="title" (click)="routeToMoviePoster(movie)">{{ movie.Title }}</div>
+      <div class="title" [routerLink]="['/movie-poster']" [queryParams]="{ posterUrl: movie.Poster }">{{ movie.Title }}</div>
       <mat-icon *ngIf="isCurrentYear(movie.Year)" class="new-icon">fiber_new</mat-icon>
     </div>
   </div>

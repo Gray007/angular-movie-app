@@ -52,10 +52,4 @@ export class SearchComponent {
     });
   }
 
-  routeToMoviePoster(movie: Movie): void {
-    const posterUrl = movie.Poster;
-    const encodedPosterUrl = encodeURIComponent(posterUrl);
-    const url = `/movie-poster/${encodedPosterUrl}`;
-    window.open(url, '_blank');
-  }
 }

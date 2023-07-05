@@ -5,7 +5,7 @@ import { MoviePosterPageComponent } from './movie-poster-page/movie-poster-page.
 
 
 const routes: Routes = [
-  { path: 'movie-poster/:posterUrl', component: MoviePosterPageComponent },
+  { path: 'movie-poster', component: MoviePosterPageComponent },
 ];
 
 @NgModule({
